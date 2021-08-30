@@ -19,6 +19,8 @@ public class MinFallingPathSum {
      * 尝试1： dp[i][j]: 以(i,j)为最后一个元素的矩阵的minFallingPathSum， 很难写出递推式
      * 尝试2： dp[i][j]: 以(i,j)为从0行下落至i行，并且下落点是(i,j)的fallingPathSum，原问题则是Min {dp[m][j], 0 < j < n};
      *         dp[i][j] = Min {dp[i - 1][j], dp[i- 1][j-1], dp[i-1][j+1]} + matrix[i][j]
+     *
+     *         原问题： min {dp[row-1][j] | 0 < j < col -1}
      * @param matrix
      * @return
      */
